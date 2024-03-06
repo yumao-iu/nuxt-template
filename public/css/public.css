@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  /* scrollbar-width: thin; */
+  font-family: 'yumao-font';
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+i,
+em {
+  font-style: normal;
+}
+
+textarea {
+  outline: none;
+  border: medium;
+}
+
+input {
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+input::-webkit-input-placeholder{
+  font-size: 15px;
+}
+input::-ms-clear,input::-ms-reveal{
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'yumao-font';
+  src: url('/fonts/boss.ttf');
+}
