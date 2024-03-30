@@ -3,8 +3,13 @@
 </template>
 
 <script setup>
-import api from '~/axios'
+import api from "~/axios";
+import { storeToRefs } from "pinia";
+import { indexStore } from "~/store";
 
-await api.init()
+let route = useRoute();
+let router = useRouter();
 
+let data = api_index();
+data.getInit();
 </script>

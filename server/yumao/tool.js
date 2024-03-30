@@ -5,24 +5,14 @@ import AlipaySdk from "alipay-sdk";
 import moment from "moment";
 const alipaySdk = new AlipaySdk({
     appId: config.alipay.id,
+    
     privateKey: config.alipay.privateKey,
     alipayPublicKey: config.alipay.publicKey
 });
 
-let dest = ''
-if (process.env.NODE_ENV == 'development') dest = './public/images';
-else dest = '.output/public/images';
 
-let upload = multer({
-    dest, //这个目录相对于项目文件中node_modules 
-    limits: {
-        files: 9,
-        fields: 10,
-        fileSize: 10.5 * 1024 * 1024
-    }
-}).array('files', 9)
 
-let { db, token_secret, mail } = config
+let { db, token_secret, mail,upload } = config
 let _mail = mail
 
 
