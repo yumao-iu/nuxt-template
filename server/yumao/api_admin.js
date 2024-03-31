@@ -5,10 +5,6 @@ import path from 'path'
 
 let route = express.Router()
 
-
-
-
-
 //接口中间件
 route.use((req, res, next) => {
     let admin_token = req.headers.authorization
