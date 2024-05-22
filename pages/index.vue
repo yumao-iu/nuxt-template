@@ -1,15 +1,18 @@
 <template>
-  <div>hello world</div>
+  <div><i>hello</i></div>
 </template>
 
-<script setup>
-import { storeToRefs } from "pinia";
-import { indexStore } from "~/store";
+<script  lang="ts" setup>
 
-let route = useRoute();
-let router = useRouter();
-
-let api = api_index();
-let data =  await api.getInit();
-console.log(data);
 </script>
+
+<style lang="less">
+.transition-enter-active,
+.transition-leave-acrive {
+  transition: all 0.5s;
+}
+.transition-enter-from,
+.transition-leave-to{
+  opacity: 0;
+}
+</style>

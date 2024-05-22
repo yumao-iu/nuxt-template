@@ -1,13 +1,13 @@
 import { defineStore } from 'pinia'
 
-export let adminStore = defineStore('adminStore', {
+export let storeAdmin = defineStore('storeAdmin', {
     state() {
         return {
-         admin_token:'',
+            token_admin: 'token_admin',
         }
     },
     actions: {
-        
+
     },
     persist: true,
 })

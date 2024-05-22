@@ -1,13 +1,12 @@
 import { defineStore } from 'pinia'
 
-export let userStore = defineStore('userStore', {
+export let storeIndex = defineStore('storeIndex', {
     state() {
         return {
-            user_token:'',
+            token_index: 'token_index',
         }
     },
     actions: {
-      
+
     },
-    persist: true,
 })

@@ -4,13 +4,8 @@ import config from "./config"
 import moment from "moment";
 import multer from 'multer'
 
-let { db, token_secret, mail,upload } = config
+let { db, token_secret, mail_config,upload } = config
 
-const alipaySdk = new AlipaySdk({
-    appId: config.alipay.id,
-    privateKey: config.alipay.privateKey,
-    alipayPublicKey: config.alipay.publicKey
-});
 
 export default {
     //上传文件中间件

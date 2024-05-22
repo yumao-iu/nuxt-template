@@ -19,5 +19,4 @@ route.use((req, res, next) => {
 })
 
 
-
 export default route
