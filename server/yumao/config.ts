@@ -64,7 +64,8 @@ let upload = multer({
     }
 }).array('files', 9)
 
-let db = mysql.createConnection(dbConfig).query('select 1', (err, r) => { console.log('现在环境是:' + process.env.NODE_ENV, '数据库远程地址:' + dbConfig.host, '图片地址为:' + imgUrl); if (err) console.log('数据库配置错误！'); else console.log('数据库成功链接！'); })
+let db = mysql.createConnection(dbConfig)
+db.query('select 1', (err, r) => { console.log('现在环境是:' + process.env.NODE_ENV, '数据库远程地址:' + dbConfig.host, '图片地址为:' + imgUrl); if (err) console.log('数据库配置错误！但不影响运行'); else console.log('数据库成功链接！'); })
 
 
 
