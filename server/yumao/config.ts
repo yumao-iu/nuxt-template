@@ -4,8 +4,8 @@ import mysql from 'mysql2'
 import path from 'path'
 
 let __dirname = path.resolve()
-let imgUrl: string = __dirname + './public/images'
-let fontUrl: string = __dirname + './public/fonts'
+let imgUrl: string = __dirname + '/public/images/'
+let fontUrl: string = __dirname + '/public/fonts/'
 let multer_dest: string = './public/images'
 let token_secret: string = 'hl'
 let alipay_config = {
@@ -29,8 +29,8 @@ let dbConfig = {
     database: <string>'bs',
 }
 if (process.env.NODE_ENV == 'production') {
-    imgUrl = __dirname + '.output/public/images'
-    fontUrl = __dirname + '.output/public/fonts'
+    imgUrl = __dirname + '/output/public/images/'
+    fontUrl = __dirname + '/output/public/fonts/'
     multer_dest = '.output/public/images'
     token_secret = 'hl'
     alipay_config = {

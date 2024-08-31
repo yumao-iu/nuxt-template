@@ -2,7 +2,7 @@
   <div><i>hello</i></div>
 </template>
 
-<script  lang="ts" setup>
+<script  setup>
 
 </script>
 
