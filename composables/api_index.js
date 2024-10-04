@@ -4,7 +4,7 @@ import config from './config'
 let { indexBaseURL } = config
 
 let api = axios.create({ method: 'post', baseURL: indexBaseURL })
-api.interceptors.response.use((config): any => {
+api.interceptors.response.use((config) => {
     return config.data
 })
 export default {

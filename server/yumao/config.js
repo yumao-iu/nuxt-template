@@ -4,29 +4,29 @@ import mysql from 'mysql2'
 import path from 'path'
 
 let __dirname = path.resolve()
-let imgUrl: string = __dirname + '/public/images/'
-let fontUrl: string = __dirname + '/public/fonts/'
-let multer_dest: string = './public/images'
-let token_secret: string = 'hl'
+let imgUrl  = __dirname + '/public/images/'
+let fontUrl  = __dirname + '/public/fonts/'
+let multer_dest  = './public/images'
+let token_secret = 'hl'
 let alipay_config = {
-    id: <string>'1',
-    privateKey: <string>'2',
-    publicKey: <string>'3',
+    id: '1',
+    privateKey:'2',
+    publicKey: '3',
 }
 let mail_config = {
-    host: <string>'1',
-    port: <string>'465',
+    host: '1',
+    port: '465',
     secure: true,
     auth: {
-        user: <string>'123',
-        pass: <string>'123',
+        user: '123',
+        pass: '123',
     },
 }
 let dbConfig = {
-    host: <string>'127.0.0.1',
-    user: <string>'root',
-    password: <string>'123456',
-    database: <string>'bs',
+    host: '127.0.0.1',
+    user: 'root',
+    password: '',
+    database:'bs',
 }
 if (process.env.NODE_ENV == 'production') {
     imgUrl = __dirname + '/output/public/images/'
@@ -66,7 +66,6 @@ let upload = multer({
 
 let db = mysql.createConnection(dbConfig)
 db.query('select 1', (err, r) => { console.log('现在环境是:' + process.env.NODE_ENV, '数据库远程地址:' + dbConfig.host, '图片地址为:' + imgUrl); if (err) console.log('数据库配置错误！但不影响运行'); else console.log('数据库成功链接！'); })
-
 
 
 export default {
