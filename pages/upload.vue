@@ -42,6 +42,11 @@ let upload = async () => {
         content: content.value,
         branch: "master",
       },
+       onUploadProgress: (progressEvent) => {
+      
+        uploadProgress.value = Math.round((progressEvent.loaded * 100) / progressEvent.total);
+        console.log(`: ${uploadProgress.value}%`);
+      }
     });
     console.log(response.data);
   } catch (error) {
